@@ -175,12 +175,30 @@ transition-timing-function: ease-in-out;
 		<div class="column">
 			<section class="columns">
 				<b>PROMO DEL MES</b>
-
 			</section>
+			<section class="columns" onclick="mostrarDimensiones()">
+				<a href="#">Dimensiones</a>
+			</section>
+			<button class="column" type="button" onclick="mostrarDimensiones()">boton dimension</button>
+			<p id="alto_valor"></p>
+			<p id="ancho_valor"></p>
 		</div>
 		<div class="column">
 		</div>
 	</section>
 
 </div>
+<script>
+	function mostrarDimensiones(){
+		let height_value = window.innerHeight;
+		let width_value = window.innerWidth;
+
+		document.getElementById('alto_valor').innerText = 'alto: ' + height_value;
+		document.getElementById('ancho_valor').innerText = 'ancho: ' + width_value;
+
+	}
+	// descomentar para mostrar cuando se carga la pagina
+	//mostrarDimensiones()
+
+</script>
 </html>
