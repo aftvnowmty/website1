@@ -24,7 +24,7 @@ header {
   }
 }
 	.column {
-	flex: auto;
+	/* flex: auto; */
 	border: 1px solid blue;
 	margin: 2px;
 	padding: 10px;
@@ -78,6 +78,9 @@ color: #E8AE42;
 opacity: 1;
 }
 
+h:{
+  text-align: center;
+}
 @media screen and (max-width: 980px) {
   .columns .column {
 		margin-bottom: 5px;
@@ -100,7 +103,7 @@ opacity: 1;
 }
 .promo_imagen{
   width:70%;
-  
+
 }
 </style>
 
@@ -133,10 +136,8 @@ opacity: 1;
 			<a href="http://panel.planta9.xyz/mitvandroid.apk">mitv</a>
 		</div>
 		<div class="column">
-			<section class="columns">
-				<h>Eventos del dia</h>
-			</section>
-      <embed src=".\hoy.png" class="promo_imagen">
+      <h>Eventos del dia</h>
+			<embed src=".\hoy.png" class="promo_imagen">
 			<button class="column"
               type="button"
               onclick="mostrarDimensiones()">boton dimension
