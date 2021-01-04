@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-* { box-sizing: border-box; }
+.wrapper {
+	max-width: 960px;
+	width: 100%;
+	margin: 20px auto;
+}
+ .columns {
+	 display: flex;
+	 flex-flow: row wrap; 
+	 justify-content: center;
+	 margin: 5px 0;
+ }
+   /* &first-child {  */
+    /* width: 10%;
+}
+ * { box-sizing: border-box; }
+
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #666;
@@ -9,22 +25,10 @@ body {
 header {
 	padding: 0 15px;
 }
-.wrapper {
-	max-width: 960px;
-	width: 100%;
-	margin: 20px auto;
-}
-.columns {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	margin: 5px 0;
-  &first-child {
-    width: 10%;
-  }
-}
-	.column {
-	/* flex: auto; */
+ */
+/*
+} */
+	/* .column {
 	border: 1px solid blue;
 	margin: 2px;
 	padding: 10px;
@@ -38,8 +42,8 @@ header {
 	font-family: Verdana, sans-serif;
   height:15px;
 	font-weight:bold;
-}
-a {
+} */
+/* a {
 	width: auto;
   display: inline-grid;
   background-color: #FC8A17;
@@ -70,18 +74,78 @@ a:hover {
 
 a:after {
 transition: opacity 10s;
-}
+} */
 
-a:hover:after {
-/* content: " Instalar"; */
+/* a:hover:after {
 color: #E8AE42;
 opacity: 1;
 }
 
-h:{
+h{
   text-align: center;
 }
-@media screen and (max-width: 980px) {
+.coverflow {
+  z-index: 10;
+  position: relative;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-touch-callout: none; }
+
+.coverflow .coverflow-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.coverflow .coverflow-tray,
+.coverflow .coverflow-rect {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.coverflow .coverflow-tray,
+.coverflow .coverflow-cell {
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: -moz-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transition: -ms-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: -o-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.coverflow .coverflow-hit {
+  position: absolute;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.coverflow .coverflow-cell canvas {
+  pointer-events: none;
+  outline: 1px solid transparent;
+  position: absolute; }
+
+.coverflow-text {
+  position: absolute;
+  width: 100%; }
+
+.coverflow-text h1,
+.coverflow-text h2 {
+  margin: 0; } */
+
+/* @media screen and (max-width: 980px) {
   .columns .column {
 		margin-bottom: 5px;
     flex-basis: 40%;
@@ -104,7 +168,112 @@ h:{
 .promo_imagen{
   width:70%;
 
+} */
+
+///////////////////////////
+* {
+  box-sizing: border-box;
 }
+body{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  font-family: Consolas;
+}
+.flex-container {
+  display: table-row;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 0 0 0.1px #ff4500,0 0 0.5px #ff4500,0 0 0.5px #ff4500;
+  border-radius: 5px;
+  /* border-style: dotted; */
+}
+a:hover{
+  color: transparent;
+  background-image: var(--url);
+  background-size: 70px 50px;
+  opacity: .3;
+  background-repeat: repeat;
+  background-position: center center;
+  /* background: var(--main-color); */
+  box-shadow: 0 0 10px #ff4500,0 0 40px #ff4500, 0 0 80px #ff4500;
+  transition-delay: 2s;
+}
+a span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1){
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#2196f3);
+}
+a:hover span:nth-child(1){
+  left: +100%;
+  transition:1s;
+}
+a span:nth-child(3){
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  height:2px;
+  background: linear-gradient(90deg,transparent,#2196f3);
+}
+a:hover span:nth-child(3) {
+  left: -100%;
+  transition: 1s;
+  transition-delay: 0.72s;
+}
+
+a span:nth-child(2){
+  top: -100%;
+  right: -0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(180deg,transparent,#2196f3);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height:100%;
+  background: linear-gradient(360deg,transparent,#2196f3);
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 1.6s;
+}
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
 </style>
 
 <head>
@@ -125,7 +294,37 @@ h:{
 		<h1>Contrata al WAP: 81-15705218</h1>
 	</header>
 	<section class="columns">
-		<div class="column">
+    <div class="flex-container">
+      <a style="--url: url(./rokutv.png)" href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Rokutv
+      </a>
+      <a style="--url: url(./ssp.png)" href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      skysoccerplus
+      </a>
+      <a style="--url: url(./1p.png)" href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      1Prime
+      </a>
+      <a style="--url: url(./flix.png)" href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      flix
+      </a>
+    </div>
+		/* <div class="column">
 			<a href="http://canal.skysoccerplus.tv/apps/ssp.apk">SSP</a>
   		<a href="http://bit.ly/red2gr">1Prime</a>
 		  <a href="https://bit.ly/3aJgeWt">Flix</a>
@@ -134,7 +333,7 @@ h:{
 			<a href="http://canalultima.com/apk/vltimafire.apk">VLTIMA</a>
 			<a href="http://bit.ly/V-and">VLT Cel</a>
 			<a href="http://panel.planta9.xyz/mitvandroid.apk">mitv</a>
-		</div>
+		</div> */
 		<div class="column">
       <h>Eventos del dia</h>
 			<embed src=".\hoy.png" class="promo_imagen">
