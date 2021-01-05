@@ -6,8 +6,6 @@
 }
 header {
  text-align: center;
- /* position: inherit; */
- /* display: inline-block; */
  padding: 15px 30px;
  color: orange;
  text-transform: uppercase;
@@ -16,7 +14,6 @@ header {
  overflow: hidden;
 }
 body{
-  /* display: grid; */
   margin: 0;
   padding: 0;
   justify-content: center;
@@ -38,137 +35,13 @@ body{
 	 margin: 5px 0;
  }
 
+ @media screen and (max-width: 980px) {
+  .columns {
+		display: table-row;
+	  flex-direction: row;
+	  font-size: 30px;
+	  text-align: center;
 
-   /* &first-child {  */
-    /* width: 10%;
-}
- * { box-sizing: border-box; }
-
-
-
-
- */
-/*
-} */
-	/* .column {
-	border: 1px solid blue;
-	margin: 2px;
-	padding: 10px;
-	font-family: Verdana, sans-serif;
-	font-weight:bold;
-	&:first-child { margin-left: 0;}
-	&:last-child { margin-right: 0; }
-}
-.parent2-div {
-	padding-left: 300px;
-	font-family: Verdana, sans-serif;
-  height:15px;
-	font-weight:bold;
-} */
-/* a {
-	width: auto;
-  display: inline-grid;
-  background-color: #FC8A17;
-  color:#ffffff;
-  position: relative;
-  border-radius:5px;
-	font-size:13px;
-  padding:5px;
-	margin:3px;
-  margin-left: 1.5px;
-  margin-right: 1.5px;
-	overflow:hidden;
-	position: relative;
-	text-align: center;
-  text-decoration: none;
-	transition: width 1s;
-}
-
-a:hover {
-  opacity:1;
-	padding:10px;
-	background-color:#285EA8;
-	text-align: center;
-	font-size:20;
-	transition-timing-function: ease-in-out;
-	transition-delay: 5ms;
-}
-
-a:after {
-transition: opacity 10s;
-} */
-
-/* a:hover:after {
-color: #E8AE42;
-opacity: 1;
-}
-
-h{
-  text-align: center;
-}
-.coverflow {
-  z-index: 10;
-  position: relative;
-  overflow: hidden;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-text-size-adjust: none;
-  -ms-text-size-adjust: none;
-  -webkit-touch-callout: none; }
-
-.coverflow .coverflow-wrap {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-.coverflow .coverflow-tray,
-.coverflow .coverflow-rect {
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-.coverflow .coverflow-tray,
-.coverflow .coverflow-cell {
-  pointer-events: none;
-  position: absolute;
-  -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  -moz-transition: -moz-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  -ms-transition: -ms-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  -o-transition: -o-transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.coverflow .coverflow-hit {
-  position: absolute;
-  opacity: 0;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.coverflow .coverflow-cell canvas {
-  pointer-events: none;
-  outline: 1px solid transparent;
-  position: absolute; }
-
-.coverflow-text {
-  position: absolute;
-  width: 100%; }
-
-.coverflow-text h1,
-.coverflow-text h2 {
-  margin: 0; } */
-
-/* @media screen and (max-width: 980px) {
-  .columns .column {
 		margin-bottom: 5px;
     flex-basis: 40%;
 		&:nth-last-child(2) {
@@ -187,23 +60,17 @@ h{
 		margin: 0 0 5px 0;
 	}
 }
-.promo_imagen{
-  width:70%;
 
-} */
-
-///////////////////////////
-
-.flex-container {
+/* .flex-container {
   display: table-row;
   flex-direction: row;
   font-size: 30px;
   text-align: center;
-}
+} */
 a{
   position: relative;
   display: inline-block;
-  padding: 15px 30px;
+  padding: 5px 30px;
   color: orange;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -279,10 +146,10 @@ a:hover span:nth-child(4) {
   transition-delay: 1.6s;
 }
 /* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
+ /* @media (max-width: 800px) {
   .flex-container {
     flex-direction: column;
-  }
+  }  */
 </style>
 
 <head>
@@ -303,7 +170,6 @@ a:hover span:nth-child(4) {
 <body>
 <div	class="wrapper">
 	<section class="columns">
-    <div class="flex-container">
       <a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
       <span></span>
       <span></span>
@@ -374,80 +240,80 @@ a:hover span:nth-child(4) {
 			<span></span>
 			Undertv
 			</a>
-    </div>
 	</section>
-	<div class="flex-container">
-		<a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		Rokutv
-		</a>
-		<a style="--url: url(./ssp.png)" href="http://canal.skysoccerplus.tv/apps/ssp.apk">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		skysoccerplus
-		</a>
-		<a style="--url: url(./1p.png)" href="http://bit.ly/red2gr">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		1Prime
-		</a>
-		<a style="--url: url(./flix.png)" href="https://bit.ly/3aJgeWt">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		flix
-		</a>
-		<a style="--url: url(./flix.png)" href="http://www.mediafire.com/file/2644caekw2w3ge1/">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		flix cel
-		</a>
-		<a style="--url: url(./mitv.png)" href="http://panel.planta9.xyz/mitvandroid.apk">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		mitv
-		</a>
-		<a style="--url: url(./vltima.png)" href="http://canalultima.com/apk/vltimafire.apk">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		VLTIMA
-		</a>
-		<a style="--url: url(./vltima.png)" href="http://bit.ly/V-and">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		VLTIMA CEL
-		</a>
-		<a style="--url: url(./pix.png)" href="https://www.pixtv.net/apk/pix_v1.1.0.apk">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		pix
-		</a>
-		<a style="--url: url(./under.png)" href="https://undertv.app/1.apk">
-		<span></span>
-		<span></span>
-		<span></span>
-		<span></span>
-		Undertv
-		</a>
-	</div>
+<section class="columns">
+	<a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	Rokutv
+	</a>
+	<a style="--url: url(./ssp.png)" href="http://canal.skysoccerplus.tv/apps/ssp.apk">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	skysoccerplus
+	</a>
+	<a style="--url: url(./1p.png)" href="http://bit.ly/red2gr">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	1Prime
+	</a>
+	<a style="--url: url(./flix.png)" href="https://bit.ly/3aJgeWt">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	flix
+	</a>
+	<a style="--url: url(./flix.png)" href="http://www.mediafire.com/file/2644caekw2w3ge1/">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	flix cel
+	</a>
+	<a style="--url: url(./mitv.png)" href="http://panel.planta9.xyz/mitvandroid.apk">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	mitv
+	</a>
+	<a style="--url: url(./vltima.png)" href="http://canalultima.com/apk/vltimafire.apk">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	VLTIMA
+	</a>
+	<a style="--url: url(./vltima.png)" href="http://bit.ly/V-and">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	VLTIMA CEL
+	</a>
+	<a style="--url: url(./pix.png)" href="https://www.pixtv.net/apk/pix_v1.1.0.apk">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	pix
+	</a>
+	<a style="--url: url(./under.png)" href="https://undertv.app/1.apk">
+	<span></span>
+	<span></span>
+	<span></span>
+	<span></span>
+	Undertv
+	</a>
+</div>
+
 </div>
 <div class="wrapper">
 <section class="columns">
