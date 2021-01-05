@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
+* {
+  box-sizing: border-box;
+}
+header {
+ text-align: center;
+ /* position: inherit; */
+ /* display: inline-block; */
+ padding: 15px 30px;
+ color: orange;
+ text-transform: uppercase;
+ letter-spacing: 4px;
+ font-size: 100%;
+ overflow: hidden;
+}
+body{
+  /* display: grid; */
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  font-family: "Lucida Console";
+}
 .wrapper {
+	display: flex;
 	max-width: 960px;
 	width: 100%;
 	margin: 20px auto;
@@ -12,17 +37,7 @@
 	 justify-content: center;
 	 margin: 5px 0;
  }
- header {
-	text-align: center;
-	/* position: inherit; */
-  /* display: inline-block; */
-  padding: 15px 30px;
-  color: orange;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 100%;
-  overflow: hidden;
- }
+
 
    /* &first-child {  */
     /* width: 10%;
@@ -178,19 +193,7 @@ h{
 } */
 
 ///////////////////////////
-* {
-  box-sizing: border-box;
-}
-body{
-  display: flow-root;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: black;
-  font-family: Consolas;
-}
+
 .flex-container {
   display: table-row;
   flex-direction: row;
@@ -364,11 +367,93 @@ a:hover span:nth-child(4) {
       <span></span>
       pix
       </a>
+			<a style="--url: url(./under.png)" href="https://undertv.app/1.apk">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+			Undertv
+			</a>
     </div>
-
 	</section>
-</body>
+	<div class="flex-container">
+		<a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		Rokutv
+		</a>
+		<a style="--url: url(./ssp.png)" href="http://canal.skysoccerplus.tv/apps/ssp.apk">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		skysoccerplus
+		</a>
+		<a style="--url: url(./1p.png)" href="http://bit.ly/red2gr">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		1Prime
+		</a>
+		<a style="--url: url(./flix.png)" href="https://bit.ly/3aJgeWt">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		flix
+		</a>
+		<a style="--url: url(./flix.png)" href="http://www.mediafire.com/file/2644caekw2w3ge1/">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		flix cel
+		</a>
+		<a style="--url: url(./mitv.png)" href="http://panel.planta9.xyz/mitvandroid.apk">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		mitv
+		</a>
+		<a style="--url: url(./vltima.png)" href="http://canalultima.com/apk/vltimafire.apk">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		VLTIMA
+		</a>
+		<a style="--url: url(./vltima.png)" href="http://bit.ly/V-and">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		VLTIMA CEL
+		</a>
+		<a style="--url: url(./pix.png)" href="https://www.pixtv.net/apk/pix_v1.1.0.apk">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		pix
+		</a>
+		<a style="--url: url(./under.png)" href="https://undertv.app/1.apk">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+		Undertv
+		</a>
+	</div>
 </div>
+<div class="wrapper">
+<section class="columns">
+</section>
+</div>
+</body>
 /* <script>
 	function mostrarDimensiones(){
 		let height_value = window.innerHeight;
