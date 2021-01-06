@@ -3,20 +3,23 @@
 <style type="text/css">
 * {
   box-sizing: border-box;
+  background-color: #ccc;
+  font-size: 30px;
 }
 header {
- text-align: center;
- color: orange;
- text-transform: uppercase;
- letter-spacing: 4px;
- font-size: 100%;
- overflow: hidden;
+  font-size: 30px;
+  text-align: center;
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 body{
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: black;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* min-height: 100vh; */
+  background: transparent;
   font-family: "Lucida Console";
 }
 .wrapper {
@@ -25,37 +28,39 @@ body{
 	width: 100%;
 	margin: auto;
 }
- .columns {
+ .card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   background-color: #fff;
 	 display: table-row;
 	 flex-flow: row wrap;
-	 justify-content: center;
-	 margin: 5px 0;
+	 margin: 5px 5px;
+   text-align: center;
  }
  @media screen and (max-width: 980px) {
 	 .wrapper{
 		 display: flex;
 		 flex-direction: column;
 	 }
-  .columns {
+
+  .card {
 		display: column;
 		flex-direction: row;
-	  font-size: 30px;
 	  text-align: center;
-
-		margin-bottom: 5px;
-		&:nth-last-child(2) {
+	  font-size: 5px !important;
+		/* margin-bottom: 5px; */
+		/* &:nth-last-child(2) {
 			margin-right: 0;
 		}
 		&:last-child {
 			flex-basis: 100%;
 			margin: 0;
-		}
+		} */
 
 	}
 }
 
 @media screen and (max-width: 680px) {
-	.columns .column {
+	.card .column {
 		flex-basis: 50%;
 		margin: 0 0 5px 0;
 	}
@@ -68,6 +73,9 @@ body{
   text-align: center;
 } */
 a{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #f00;
   position: relative;
   display: inline-block;
   padding: 5px 5px;
@@ -79,16 +87,16 @@ a{
   overflow: hidden;
   transition: 0.2s;
   box-shadow: 0 0 0.1px #ff4500,0 0 0.5px #ff4500,0 0 0.5px #ff4500;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
 a:hover{
-  color: transparent;
+  color: black;
   background-image: var(--url);
   background-size: 25px 25px;
-  opacity: .3;
+  /* opacity: .3; */
   background-repeat: repeat;
   background-position: center center;
-  /* background: var(--main-color); */
   box-shadow: 0 0 10px #ff4500,0 0 40px #ff4500, 0 0 80px #ff4500;
   transition-delay: 2s;
 }
@@ -163,12 +171,14 @@ a:hover span:nth-child(4) {
         content="telephone=no">
   <title>APKS - 81-1570-5218-</title>
 </head>
-<header>
-	<h1>Contrata al WAP: 81-15705218</h1>
-</header>
+<div class="wrapper">
+  <section class="card">
+	   <header>Contrata al WAP: 81-15705218</header>
+  </section>
+</div>
 <body>
 <div	class="wrapper">
-	<section class="columns">
+	<section class="card">
       <a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
       <span></span>
       <span></span>
@@ -240,86 +250,13 @@ a:hover span:nth-child(4) {
 			Undertv
 			</a>
 	</section>
-<section class="columns">
-	<a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	Rokutv
-	</a>
-	<a style="--url: url(./ssp.png)" href="http://canal.skysoccerplus.tv/apps/ssp.apk">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	skysoccerplus
-	</a>
-	<a style="--url: url(./1p.png)" href="http://bit.ly/red2gr">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	1Prime
-	</a>
-	<a style="--url: url(./flix.png)" href="https://bit.ly/3aJgeWt">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	flix
-	</a>
-	<a style="--url: url(./flix.png)" href="http://www.mediafire.com/file/2644caekw2w3ge1/">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	flix cel
-	</a>
-	<a style="--url: url(./mitv.png)" href="http://panel.planta9.xyz/mitvandroid.apk">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	mitv
-	</a>
-	<a style="--url: url(./vltima.png)" href="http://canalultima.com/apk/vltimafire.apk">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	VLTIMA
-	</a>
-	<a style="--url: url(./vltima.png)" href="http://bit.ly/V-and">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	VLTIMA CEL
-	</a>
-	<a style="--url: url(./pix.png)" href="https://www.pixtv.net/apk/pix_v1.1.0.apk">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	pix
-	</a>
-	<a style="--url: url(./under.png)" href="https://undertv.app/1.apk">
-	<span></span>
-	<span></span>
-	<span></span>
-	<span></span>
-	Undertv
-	</a>
+  <section class="card">
+    Hola.
+  </section>
 </div>
 
-</div>
-<div class="wrapper">
-<section class="columns">
-</section>
-</div>
 </body>
-/* <script>
+<script>
 	function mostrarDimensiones(){
 		let height_value = window.innerHeight;
 		let width_value = window.innerWidth;
@@ -328,5 +265,5 @@ a:hover span:nth-child(4) {
 		document.getElementById('ancho_valor').innerText = 'ancho: ' + width_value;
 
 	}
-</script> */
+</script>
 </html>
