@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
   box-sizing: border-box;
-  background-color: #ccc;
+  background-color: #000;
   font-size: 30px;
+  font-family: 'Roboto', sans-serif;
 }
 header {
   font-size: 30px;
@@ -13,14 +15,20 @@ header {
   text-transform: uppercase;
   letter-spacing: 4px;
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+h1{
+  /* padding: 1px;
+  margin: 5px;
+  background-color: #fff; */
+  /* border-bottom:solid 7px #41403E; */
+  align-self:center;
+  text-transform: uppercase;
+  background-color: orange;
+  box-shadow: 0 6px 20px 0 #000;
 }
 body{
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* min-height: 100vh; */
-  background: transparent;
-  font-family: "Lucida Console";
+
 }
 .wrapper {
 	display: flex;
@@ -28,13 +36,17 @@ body{
 	width: 100%;
 	margin: auto;
 }
+.wrapper > *{
+  flex-basis: 100%;
+}
  .card {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   box-shadow: 0 15px 8px 0 , 0 6px 20px 0 #fff;
    background-color: #fff;
 	 display: table-row;
 	 flex-flow: row wrap;
 	 margin: 5px 5px;
    text-align: center;
+   padding: 5px;
  }
  @media screen and (max-width: 980px) {
 	 .wrapper{
@@ -43,39 +55,15 @@ body{
 	 }
 
   .card {
-		display: column;
+		/* display: column;
 		flex-direction: row;
 	  text-align: center;
 	  font-size: 5px !important;
-		/* margin-bottom: 5px; */
-		/* &:nth-last-child(2) {
-			margin-right: 0;
-		}
-		&:last-child {
-			flex-basis: 100%;
-			margin: 0;
-		} */
-
+    overflow: hidden; */
 	}
 }
-
-@media screen and (max-width: 680px) {
-	.card .column {
-		flex-basis: 50%;
-		margin: 0 0 5px 0;
-	}
-}
-
-/* .flex-container {
-  display: table-row;
-  flex-direction: row;
-  font-size: 30px;
-  text-align: center;
-} */
 a{
-  margin-top: 5px;
-  margin-bottom: 5px;
-  background-color: #f00;
+  background-color: #000;
   position: relative;
   display: inline-block;
   padding: 5px 5px;
@@ -86,19 +74,18 @@ a{
   font-size: 30px;
   overflow: hidden;
   transition: 0.2s;
-  box-shadow: 0 0 0.1px #ff4500,0 0 0.5px #ff4500,0 0 0.5px #ff4500;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
+  opacity: 1;
 }
 a:hover{
-  color: black;
   background-image: var(--url);
   background-size: 25px 25px;
-  /* opacity: .3; */
   background-repeat: repeat;
   background-position: center center;
-  box-shadow: 0 0 10px #ff4500,0 0 40px #ff4500, 0 0 80px #ff4500;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition-delay: 2s;
+  -webkit-text-stroke: .2px #fff; /* width and color */
 }
 a span{
   position: absolute;
@@ -108,8 +95,8 @@ a span:nth-child(1){
   top: 0;
   left: -100%;
   width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg,transparent,#2196f3);
+  height: 5px;
+  background: linear-gradient(90deg,transparent,orange);
 }
 a:hover span:nth-child(1){
   left: +100%;
@@ -119,8 +106,8 @@ a span:nth-child(3){
   bottom: 0;
   left: 100%;
   width: 100%;
-  height:2px;
-  background: linear-gradient(90deg,transparent,#2196f3);
+  height:5px;
+  background: linear-gradient(90deg,transparent,orange);
 }
 a:hover span:nth-child(3) {
   left: -100%;
@@ -131,9 +118,9 @@ a:hover span:nth-child(3) {
 a span:nth-child(2){
   top: -100%;
   right: -0;
-  width: 2px;
+  width: 5px;
   height:100%;
-  background: linear-gradient(180deg,transparent,#2196f3);
+  background: linear-gradient(180deg,transparent,orange);
 }
 a:hover span:nth-child(2) {
   top: 100%;
@@ -143,20 +130,58 @@ a:hover span:nth-child(2) {
 a span:nth-child(4){
   bottom: -100%;
   left: 0;
-  width: 2px;
+  width: 5px;
   height:100%;
-  background: linear-gradient(360deg,transparent,#2196f3);
+  background: linear-gradient(360deg,transparent,orange);
 }
 a:hover span:nth-child(4) {
   bottom: 100%;
   transition: 1s;
   transition-delay: 1.6s;
 }
-/* Responsive layout - makes a one column-layout instead of two-column layout */
- /* @media (max-width: 800px) {
-  .flex-container {
-    flex-direction: column;
-  }  */
+.back-folder-part {
+    height: 150px;
+    position: absolute;
+    width: 30%;
+}
+.back-folder-part:after {
+    background: #5CA4F1;
+    border-radius: 5px 5px 0 0;
+    content:'';
+    height: 25%;
+    position: absolute;
+    top: -15px;
+    width: 100%;
+}
+.back-folder-part:before {
+    background: #5CA4F1;
+    border-radius: 0 5px 0 0;
+    content:'';
+    height: 25%;
+    position: absolute;
+    right: 2px;
+    top: -6px;
+    width: 100%;
+}
+.main-folder-part {
+    background-image: linear-gradient(180deg, #72BAFB 0%, #347EE1 100%);
+    box-shadow: inset 0 1px 3px 0 rgba(255,255,255,0.50), 0 -2px 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    height: 150px;
+    position: relative;
+    width: 200px;
+}
+.main-folder-part:after {
+    content:'';
+    box-shadow: 0 8px 8px 0 rgba(114,186,251,0.60);
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
 </style>
 
 <head>
@@ -179,6 +204,7 @@ a:hover span:nth-child(4) {
 <body>
 <div	class="wrapper">
 	<section class="card">
+      <h1>Apps</h1>
       <a style="--url: url(./rokutv.png)" href="http://bit.ly/atvrq">
       <span></span>
       <span></span>
@@ -250,9 +276,13 @@ a:hover span:nth-child(4) {
 			Undertv
 			</a>
 	</section>
+
   <section class="card">
+    <h1>Noticias</h1>
     Hola.
   </section>
+
+  </div>
 </div>
 
 </body>
