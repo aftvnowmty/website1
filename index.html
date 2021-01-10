@@ -28,7 +28,26 @@ h1{
   background-color: orange;
   box-shadow: 0 6px 20px 0 #000;
 }
-body{
+h3{
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.post{
+  background-color: transparent;
+}
+.imagen-post{
+  width: 150px;
+  float: left;
+  clip-path: circle(30% at 50% 50%);
+  shape-outside: circle();
+}
+.descripcion-post{
+  text-align: justify;
+  background-color: transparent;
+  padding: 10px;
+  margin: 0px;
 
 }
 .wrapper {
@@ -288,7 +307,11 @@ a:hover span:nth-child(4) {
 
   <section class="card">
     <h1>Noticias</h1>
-    A partir del 15 de Enero, SkySoccerPlus actualiza su precio a $200 MXN mensualmente, sin embargo estamos buscando opciones para tener promociones, esten atentos a las noticias de este canal. GRACIAS!!!!
+    <div class="post">
+      <embed src="ssp.png" class="imagen-post">
+      <h3>SkySoccerPlus actualiza sus precios.</h3>
+      <p class="descripcion-post">A partir del 15 de Enero, SkySoccerPlus actualiza su precio a $200 MXN mensualmente, sin embargo estamos buscando opciones para tener promociones, estén atentos a las noticias de este canal. ¡¡¡¡GRACIAS!!!!</p>
+    </div>
   </section>
 
   </div>
